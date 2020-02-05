@@ -1,0 +1,49 @@
+{
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "golden-number",
+  "version": "1.0.0",
+  "description": "Golden ratio based number generator",
+  "scripts": {
+    "lint": "eslint \"src/**/*.{j,t}s?(x)\"",
+    "pretty": "pretty-quick",
+    "test": "jest",
+    "size": "size-limit"
+  },
+  "author": "Alexey Komarov <alex7kom@gmail.com>",
+  "devDependencies": {
+    "@alex7kom/sayonara-config": "0.8.0",
+    "@size-limit/preset-small-lib": "^4.0.0",
+    "husky": "^4.2.1",
+    "size-limit": "^4.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/@alex7kom/sayonara-config/src/configs/eslint-universal.js",
+      "./node_modules/@alex7kom/sayonara-config/src/configs/eslint-jest.js"
+    ],
+    "rules": {
+      "strict": "off"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alex7kom/golden-number.git"
+  },
+  "sayonaraConfig": {
+    "sets": [
+      "npm-package",
+      "universal-library"
+    ]
+  },
+  "size-limit": [
+    {
+      "path": "src/index.js"
+    }
+  ]
+}

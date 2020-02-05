@@ -1,0 +1,14 @@
+# deps
+node_modules
+
+# IDEs
+.vscode
+.idea
+
+# tests
+coverage
+
+# trash
+.DS_Store
+
+## DO NOT EDIT ABOVE THIS LINE ##

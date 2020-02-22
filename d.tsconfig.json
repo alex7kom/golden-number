@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig",
+  "exclude": [
+    "**/*.test.js",
+    "**/*.test.jsx",
+    "jest.config.js"
+  ],
+  "compilerOptions": {
+    "declaration": true,
+    "noEmit": false,
+    "emitDeclarationOnly": true
+  }
+}

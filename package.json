@@ -1,6 +1,7 @@
 {
   "license": "MIT",
   "main": "src/index.js",
+  "types": "src/index.d.ts",
   "name": "golden-number",
   "version": "1.0.0",
   "description": "Golden ratio based number generator",
@@ -12,7 +13,8 @@
     "test:lint": "npm run lint",
     "test:jest": "jest",
     "build:void": ":",
-    "prepublishOnly": "run-s build:*"
+    "prepublishOnly": "run-s build:*",
+    "build:dts": "tsc -p d.tsconfig.json"
   },
   "author": "Alexey Komarov <alex7kom@gmail.com>",
   "devDependencies": {
@@ -43,7 +45,8 @@
   "sayonaraConfig": {
     "sets": [
       "npm-package",
-      "universal-library"
+      "universal-library",
+      "ts-ready"
     ]
   },
   "size-limit": [
@@ -51,5 +54,7 @@
       "path": "src/index.js"
     }
   ],
-  "eslintIgnore": []
+  "eslintIgnore": [
+    "src/**/*.d.ts"
+  ]
 }

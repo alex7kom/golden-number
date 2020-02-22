@@ -3,7 +3,7 @@
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "name": "golden-number",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Golden ratio based number generator",
   "scripts": {
     "lint": "eslint \"src/**/*.{j,t}s?(x)\"",

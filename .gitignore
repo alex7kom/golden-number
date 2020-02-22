@@ -8,6 +8,9 @@ node_modules
 # tests
 coverage
 
+# ts
+*.d.ts
+
 # trash
 .DS_Store
 

@@ -7,12 +7,16 @@
   "scripts": {
     "lint": "eslint \"src/**/*.{j,t}s?(x)\"",
     "pretty": "pretty-quick",
-    "test": "jest",
-    "size": "size-limit"
+    "test": "run-s test:*",
+    "size": "size-limit",
+    "test:lint": "npm run lint",
+    "test:jest": "jest",
+    "build:void": ":",
+    "prepublishOnly": "run-s build:*"
   },
   "author": "Alexey Komarov <alex7kom@gmail.com>",
   "devDependencies": {
-    "@alex7kom/sayonara-config": "0.8.0",
+    "@alex7kom/sayonara-config": "0.9.0",
     "@size-limit/preset-small-lib": "^4.0.0",
     "husky": "^4.2.1",
     "size-limit": "^4.0.0"
@@ -20,11 +24,12 @@
   "eslintConfig": {
     "extends": [
       "./node_modules/@alex7kom/sayonara-config/src/configs/eslint-universal.js",
-      "./node_modules/@alex7kom/sayonara-config/src/configs/eslint-jest.js"
+      "./node_modules/@alex7kom/sayonara-config/src/configs/eslint-jest-overrides.js"
     ],
     "rules": {
       "strict": "off"
-    }
+    },
+    "overrides": []
   },
   "husky": {
     "hooks": {
@@ -45,5 +50,6 @@
     {
       "path": "src/index.js"
     }
-  ]
+  ],
+  "eslintIgnore": []
 }
